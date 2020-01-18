@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 25px;
+}
+
+h4 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+body {
+    background-color: #005ce6;
+    font-family: 'Bangers', cursive;
+}
+
+#addButton {
+    margin-bottom: 25px;
+}
+
+h5 {
+    color: white;
+}

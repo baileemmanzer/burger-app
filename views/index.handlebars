@@ -1,0 +1,62 @@
+<h1>BURGER NOMMING TIME!</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <img src="/assets/img/KrabbyPatty.jpg" width=100%>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div class = "container">
+    <div class="row">
+        <div class = "col-sm-6">
+        <h5>NOMNOMNOM ON THIS</h5>
+        <!--my buttons on the left that say "NOMNOMNOM"-->
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burger/burger-block devoured=false}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+        </div>
+        <!--my buttons on the right that say "HAVE BEEN NOMMED"-->
+        <div class = "col-sm-6">
+        <h5>HAVE BEEN NOMMED ON</h5>
+        <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                    {{> burger/burger-block devoured=true}}
+                {{/if}}
+            {{/each}}
+        </ul>
+        </div>
+    </div>
+</div>
+
+<!--button for adding more things to NOM on-->
+<h4>ADD SOMETHING TO NOM</h4>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default">ENTER NOM HERE: </span>
+  </div>
+  <input type="text" id="nomInput" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+  
+</div>
+
+<div class="container">
+<div class="row">
+    <div class="col-5"></div>
+    <div class="col-3">
+        <button type="submit" class="btn btn-light" id= "addButton">ADD NOM</button>
+    </div>
+    <div class="col-5"></div>
+</div>
+</div>
